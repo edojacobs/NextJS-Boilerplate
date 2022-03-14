@@ -6,6 +6,7 @@
     "build": "next build",
     "start": "next start",
     "test": "cypress run",
+    "prepare": "husky install",
     "cypress:run": "cypress run",
     "cypress:open": "cypress open"
   },
@@ -16,8 +17,31 @@
   },
   "devDependencies": {
     "cypress": "^9.5.1",
+    "@babel/core": "^7.17.7",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
     "@types/node": "^17.0.21",
     "@types/react": "^17.0.40",
+    "@types/styled-components": "^5.1.24",
+    "@typescript-eslint/eslint-plugin": "^5.14.0",
+    "@typescript-eslint/parser": "^5.14.0",
+    "babel-loader": "^8.2.3",
+    "babel-plugin-styled-components": "^2.0.6",
+    "eslint": "^8.11.0",
+    "eslint-config-next": "^12.1.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "husky": "^7.0.4",
+    "prettier": "^2.5.1",
+    "react-dom": "^17.0.2",
     "typescript": "^4.6.2"
+  },
+  "lint-staged": {
+    "src/**/*": [
+      "yarn lint --fix",
+      "yarn test --findRelatedTests --bail"
+    ]
   }
 }
