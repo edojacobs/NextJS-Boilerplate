@@ -3,12 +3,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
     "start": "next start",
+    "build": "next build",
     "test": "cypress run",
-    "prepare": "husky install",
-    "cypress:run": "cypress run",
-    "cypress:open": "cypress open"
+    "prepare": "husky install"
   },
   "dependencies": {
     "next": "^12.1.0",
